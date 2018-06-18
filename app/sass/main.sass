@@ -1,0 +1,141 @@
+@import "../libs/bootstrap/scss/my-variables"
+@import "../libs/bootstrap/scss/bootstrap"
+@import "_mixins/mixins"
+@import "animate"
+@import "fonts"
+
+html, body
+	height: 100%
+	body
+		min-width: 320px
+		position: relative
+		font-family: $default-font
+		color: $main-color
+		box-sizing: border-box
+		overflow-x: hidden
+		input, textarea
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+				&:required:valid
+					border-color: green
+
+.clearfix
+	display: block
+	clear: both
+	content: ""
+header
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 50
+	height: 100vh
+	width: 15.62vw
+	background-color: #242b2e
+	color: #6b7072
+	box-shadow: 8px 0px 14px 0px #848484
+	display: flex
+	flex-flow: column nowrap
+	justify-content: flex-start
+#Logo
+	width: 100%
+	height: 11.57vh
+	background-color: #fff
+	display: flex
+	flex-flow: row nowrap
+	justify-content: center
+	align-items: center
+	font-size: 0.99vmax
+	p
+		margin: 0 0 6px 5px
+	.span
+		transform: rotate(-90deg)
+		float: left
+		font-size: 0.73vmax
+	.Logo
+		width: 32%
+		
+
+#main-nav
+	a
+		text-transform: uppercase
+		font-size: 0.93vmax
+		line-height: 1.66vmax
+		height: 3.22vmax
+		width: 100%
+		display: flex
+		flex-flow: row nowrap
+		justify-content: flex-end
+		align-items: center
+		align-content: center
+		background-color: #2f373b
+		padding-right: 10px
+	
+	ul
+		list-style: none
+		padding-left: 0
+		margin: 0
+		li a
+			&:hover
+				background-color: #222
+				transition: 0.3s ease
+		li
+			box-shadow: 0px 2px 20px #222
+#title-filter
+	color: #1ab5b3
+	fill: #1ab5b3
+	font-size: 1.2vmax
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	align-content: center
+	
+	svg
+		width: 1.2vmax
+		height: 1.2vmax
+		margin: 0.8vmax
+#filter 
+	ul
+		padding: 0
+		margin: 0
+	li
+		list-style: none
+		width: 100%
+		&.active a
+			color: #fff
+		a
+			font-size: 0.97vmax
+			line-height: 1.25vmax
+			color: #616669
+			display: flex
+			flex-flow: row nowrap
+			justify-content: flex-end
+			align-items: center
+			align-content: center
+			padding: 0.45vmax 0.85vmax
+			&:hover
+				color: #fff
+				transition: 0.3s ease
+#social
+	display: flex
+	flex-flow: column nowrap
+	justify-content: flex-end
+	align-items: center
+	align-content: center
+	font-size: 1.2vmax
+	padding: 1.2vmax
+	text-align: center
+	p
+		margin: 0
+
+.main
+	width: 100%
+	height: 100vh
+	padding-left: 17.62vw
+	
+	color: #333
+
+
+
+
+@import "media" // Always at the end
